@@ -1,0 +1,28 @@
+package com.nt.comp;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public abstract class BookCollection {
+	private  String type;
+	private List<String> books=new ArrayList();
+	public BookCollection() {
+		System.out.println("BookCollection::0-param constructor");
+		
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public List<String> getBooks() {
+		return books;
+	}
+	public void setBooks(List<String> books) {
+		this.books = books;
+	}
+	
+	public abstract void loadBooks(); 
+
+}

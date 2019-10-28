@@ -1,0 +1,34 @@
+package com.nt.ext2;
+
+import com.nt.dto.CrickterIdDTO;
+import com.nt.dto.CrickterPorfileDTO;
+import com.nt.ext1.IccCricketerIdFinder;
+
+public class IccCrickterIdFinderImpl implements IccCricketerIdFinder {
+
+	@Override
+	public CrickterIdDTO fetchIdDetailsByName(String name) {
+		  CrickterPorfileDTO pDTO=null;
+		  pDTO=new CrickterPorfileDTO();
+		  if(name.equalsIgnoreCase("sachin")) {
+			  iDTO.setCrickterId(1001);
+			  iDTO.setCricketerName("sachin Tendulkar");
+			  iDTO.setNation("india");
+		  }
+		  else if(name.equalsIgnoreCase("kohli")) {
+			  iDTO.setCrickterId(1002);
+			  iDTO.setCricketerName("virat kohli");
+			  iDTO.setNation("india");
+		  }
+		  else if(name.equalsIgnoreCase("dhoni")) {
+			  iDTO.setCrickterId(1003);
+			  iDTO.setCricketerName("MS Dhoni");
+			  iDTO.setNation("india");
+		  }
+		  else {
+			  throw new IllegalArgumentException("Invlid CRicketer name");
+		  }
+		return iDTO;
+	}//metod
+
+}//class

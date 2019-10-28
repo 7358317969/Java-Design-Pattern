@@ -1,0 +1,54 @@
+package com.nt.controller;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.nt.delegate.EmployeeMgmtBusinessDelegate;
+import com.nt.vo.EmployeeVO;
+
+public class MainControllerServlet extends HttpServlet {
+	 private EmployeeMgmtBusinessDelegate delegate;
+	@Override
+	public void init() throws ServletException {
+	   delegate=new EmployeeMgmtBusinessDelegate();
+	}
+	
+	@Override
+	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		EmployeeVO vo=null;   
+		String resultMsg=null;
+		RequestDispatcher rd=null;
+		
+		//read  form data and store into VO class object
+		vo=new EmployeeVO();
+		vo.setEname(req.getParameter("ename"));
+		vo.setEadd(req.getParameter("eadd"));
+		vo.setDesg(req.getParameter("desg"));
+		vo.setSalary(req.getParameter("salary"));
+		try {
+			//use BusinessDelegate
+			resultMsg=delegate.regsiterEmployee(vo);
+			//keep the result in request scope
+			req.setAttribute("result",resultMsg);
+			//forward to  show_result.jsp
+			rd=req.getRequestDispatcher("show_result.jsp");
+			rd.forward(req,res);
+		}
+		
+		
+		
+		
+		
+	}
+	
+	@Override
+	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		 doGet(req,res);
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;StrategyDP-Solution&apos; to &apos;StrategyDP-Solution1&apos;" description="Rename resource &apos;StrategyDP-Solution&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/StrategyDP-Solution" name="StrategyDP-Solution1" stamp="1568607625923" updateReferences="true"/>
+</session>

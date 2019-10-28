@@ -1,0 +1,9 @@
+package com.nt.ext2;
+
+import com.nt.dto.CrickterIdDTO;
+
+public interface IccCricketerIdFinder {
+	
+	public  CrickterIdDTO   fetchIdDetailsByName(String name);
+
+}

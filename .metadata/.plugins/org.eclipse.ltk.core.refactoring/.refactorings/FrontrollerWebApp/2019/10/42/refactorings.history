@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;FrontrollerWebApp/WebContent/display_profile.jsp&apos; to &apos;present_profile.jsp&apos;" description="Rename resource &apos;display_profile.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/display_profile.jsp" name="present_profile.jsp" stamp="1571285960492" updateReferences="true"/>
+</session>

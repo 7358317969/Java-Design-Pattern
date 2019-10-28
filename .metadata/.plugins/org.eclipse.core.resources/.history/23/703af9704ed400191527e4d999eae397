@@ -1,0 +1,21 @@
+package com.nt.test;
+
+import com.nt.dao.DAO;
+import com.nt.factory.DAOFactory;
+
+
+public class AbstractFactoryDP {
+
+	public static void main(String[] args) {
+		DAOFactory factory=null;
+		DAO stDao=null,crDao=null;
+		//get DAO Fcatory
+		 factory= DAOFactory.getFactoryInstance("DB");
+		 //get DAOs
+		 stDao=factory.getInstance("student");
+		 crDao=factory.getInstance("course");
+		//use DAos
+		stDao.insert();
+		crDao.insert();
+	}
+}

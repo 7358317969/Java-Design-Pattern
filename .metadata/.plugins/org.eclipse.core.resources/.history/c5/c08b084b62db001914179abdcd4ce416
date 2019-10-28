@@ -1,0 +1,12 @@
+package com.nt.dto;
+
+import java.io.Serializable;
+
+@Data
+public class CardInfoDTO implements Serializable {
+	private int cardNo;
+	private String bankName;
+	private  float amount;
+	
+
+}

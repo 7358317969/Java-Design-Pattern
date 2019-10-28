@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=CricketerLayeredApp-SessionFacade-ServiceLocator/src&lt;com.nt.sessionfacade{IccCrickterProfileSessionFacade.java[IccCrickterProfileSessionFacade" modifiers="513" timestamp="1570931291113"/>
+<typeInfo handle="=CricketerLayeredApp-SessionFacade-ServiceLocator/src&lt;com.nt.ext1{IccCricketerIdFinder.java[IccCricketerIdFinder" modifiers="513" timestamp="1570856202032"/>
+<typeInfo handle="=CricketerLayeredApp-SessionFacade-ServiceLocator/src&lt;com.nt.service{CrickBuzzProfileMgmtService.java[CrickBuzzProfileMgmtService" modifiers="513" timestamp="1570932137938"/>
+<typeInfo handle="=CricketerLayeredApp-SessionFacade-ServiceLocator/C:\/Program Files\/Java\/jdk1.8.0_31\/jre\/lib\/rt.jar&lt;com.oracle.webservices.internal.api.message(MessageContextFactory$Creator.class[Creator" modifiers="1050122" timestamp="1568195542656"/>
+<typeInfo handle="=FrontrollerWebApp/src&lt;com.nt.dao{ProfileDAO.java[ProfileDAO" modifiers="513" timestamp="1571201006360"/>
+<typeInfo handle="=FrontrollerWebApp/C:\/Program Files\/Java\/jdk1.8.0_31\/jre\/lib\/rt.jar&lt;sun.java2d.cmm(ProfileActivator.class[ProfileActivator" modifiers="1537" timestamp="1568195542656"/>
+<typeInfo handle="=FrontrollerWebApp/src&lt;com.nt.service{ProfileMgmtService.java[ProfileMgmtService" modifiers="513" timestamp="1571201387501"/>
+<typeInfo handle="=FrontrollerWebApp/C:\/Program Files\/Java\/jdk1.8.0_31\/jre\/lib\/rt.jar&lt;com.sun.corba.se.impl.protocol.giopmsgheaders(ProfileAddr.class[ProfileAddr" modifiers="1537" timestamp="1568195542656"/>
+<typeInfo handle="=FrontrollerWebApp/src&lt;com.nt.command{Command.java[Command" modifiers="513" timestamp="1571202018203"/>
+</typeInfoHistroy>

@@ -1,0 +1,15 @@
+package com.nt.test;
+
+import com.nt.comp.BooksCollection;
+import com.nt.factory.BookFactory;
+import com.nt.factory.BookType;
+
+public class PrototypeDPTest {
+
+	public static void main(String[] args) {
+	     BooksCollection  fCollection1=null,fCollection2=null;
+	     fCollection1=BookFactory.getInstance(BookType.FICTIONAL);
+
+	}
+
+}

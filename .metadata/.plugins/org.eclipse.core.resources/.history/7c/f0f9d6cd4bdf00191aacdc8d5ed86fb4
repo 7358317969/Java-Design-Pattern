@@ -1,0 +1,11 @@
+package com.nt.factory;
+
+public class BookFactory {
+	
+	
+	public  static   BookCollection   getInstance(String type) {
+		
+		
+	}
+
+}

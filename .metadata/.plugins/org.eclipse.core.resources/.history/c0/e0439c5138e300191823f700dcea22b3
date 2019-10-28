@@ -1,0 +1,48 @@
+package com.nt.service;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.util.Properties;
+
+import com.nt.dao.CustomerDAO;
+import com.nt.dto.CustomerDTO;
+import com.nt.factory.CustomerDAOFactory;
+
+
+public class CustomerServiceImpl implements CustomerService {
+	private CustomerDAO dao;
+	private static Properties props;
+	static {
+		InputStream is=null;
+		try {
+		//collect info from jdbc.properties
+			is=new FileInputStream("com/nt/commons/jdbc.properties");
+			props=new Properties();
+			props.load(is);
+		}
+		catch(FileNotFoundException fne) {
+			fne.printStackTrace();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	public CustomerServiceImpl() {
+		//get DAO class obj through factory
+		dao=CustomerDAOFactory.getInstance(props.getProperty("customer.dao.type"));
+		
+	}
+	
+	@Override
+	public String register(CustomerDTO dto) throws Exception {
+		int count=0;
+		//convert DTO to BO
+		
+		//use DAO
+		count=dao.insert(bo);
+			return null;
+	}
+
+}

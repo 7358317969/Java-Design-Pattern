@@ -1,0 +1,30 @@
+package com.nt.controller;
+
+import com.nt.dto.CustomerDTO;
+import com.nt.service.CustomerService;
+import com.nt.service.CustomerServiceImpl;
+import com.nt.vo.CustomerVO;
+
+public class MainController {
+	private CustomerService service=null;
+	
+	public MainController() {
+		service=new CustomerServiceImpl();
+	}
+	
+	public  String processCustomer(CustomerVO vo)throws Exception {
+		CustomerDTO dto=null;
+		String resultMsg=null;
+		//convert VO to DTO
+		dto=new CustomerDTO();
+		dto.setCustName(vo.getCustName());
+		dto.setCustAddrs(vo.getCustAddrs());
+		dto.setPAmt(Float.parseFloat(vo.getPAmt()));
+		dto.setRate(Float.parseFloat(vo.getRate()));
+		dto.setTime(Float.parseFloat(vo.getTime()));
+		//use Service
+		resultMsg=service.calcSimpleIntrAmount(dto);
+		return resultMsg;
+	}
+
+}

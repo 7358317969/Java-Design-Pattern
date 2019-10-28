@@ -1,0 +1,30 @@
+package com.nt.test;
+
+import java.lang.reflect.Method;
+
+import com.nt.loader.CCLoader;
+import com.nt.sdp.Printer;
+
+public class SingletonTest7 {
+
+	public static void main(String[] args)throws Exception {
+		Printer p1=null,p2=null;
+		p1=Printer.getInstance();
+		System.out.println(p1.hashCode());
+
+		ClassLoader loader=new CCLoader();
+		Class<?> c1=loader.loadClass(p1.getClass().getName());
+		Method method=c1.getDeclaredMethod("getInstance",new Class[] {});
+		p2=(Printer) method.invoke(null, new Object[] {});
+		
+		System.out.println(p1.hashCode()+"  "+p2.hashCode());
+		
+		/*ClassLoader loader1=new CCLoader(Printer.class.getClassLoader());
+		Class c2=loader1.loadClass(p1.getClass().getName());
+		Method method1=c2.getDeclaredMethod("getInstance",new Class[] {});
+		p2=(com.nt.sdp.Printer) method1.invoke(null, new Object[] {});*/
+		
+
+	}
+
+}

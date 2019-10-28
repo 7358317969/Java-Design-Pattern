@@ -1,0 +1,30 @@
+package com.nt.test;
+
+import java.util.Scanner;
+
+public class JeeDAODPTest {
+
+	public static void main(String[] args) {
+		Scanner sc=null;
+		String name=null,addrs=null,pAmt=null,rate=null,time=null;
+		//read inputs
+		sc=new Scanner(System.in);
+		System.out.println("enter Customer name::");
+		name=sc.next();
+		System.out.println("Enter  customer address::");
+		addrs=sc.next();
+		System.out.println("enter  Principle Amount::");
+		pAmt=sc.next();
+		System.out.println("enter rate of Intrest:: ");
+		rate=sc.next();
+		System.out.println("enter Time ::");
+		time=sc.next();
+		
+		
+		
+		
+		
+
+	}
+
+}

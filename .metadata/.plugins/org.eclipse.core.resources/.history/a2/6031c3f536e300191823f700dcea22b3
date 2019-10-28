@@ -1,0 +1,13 @@
+package com.nt.service;
+
+import com.nt.dto.CustomerDTO;
+
+public class CustomerServiceImpl implements CustomerService {
+
+	@Override
+	public String register(CustomerDTO dto) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

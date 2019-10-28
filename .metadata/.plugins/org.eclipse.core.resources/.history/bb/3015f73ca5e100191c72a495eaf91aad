@@ -1,0 +1,6 @@
+package com.nt.bo;
+
+@Data
+public class CustomerBO {
+
+}

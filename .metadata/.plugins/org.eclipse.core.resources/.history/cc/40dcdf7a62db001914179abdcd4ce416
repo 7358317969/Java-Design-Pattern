@@ -1,0 +1,16 @@
+package com.nt.external;
+
+import java.util.Random;
+
+public enum PaypalCompImpl implements PaypalComp {
+	 INSTANCE;
+	
+	@Override
+	//B.method having b.logic
+	public String doPayment(int cardNo, int bankCode, float amt) {
+		Random rad=null;
+		rad=new Random();
+		return  "TxId ::"+rad.nextInt(1000000)+" transaction is successfully comppled for the amount::"+amt;
+	}
+
+}

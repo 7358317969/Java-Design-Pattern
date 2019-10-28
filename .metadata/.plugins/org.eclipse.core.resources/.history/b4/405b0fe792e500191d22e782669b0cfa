@@ -1,0 +1,16 @@
+package com.nt.dao;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import com.nt.bo.BaseEmployeeBO;
+
+public class HREmployeeDAO implements EmployeeDAO {
+
+	@Override
+	public void insert(BaseEmployeeBO bo, Connection con) throws SQLException {
+		// TODO Auto-generated method stub
+
+	}
+
+}

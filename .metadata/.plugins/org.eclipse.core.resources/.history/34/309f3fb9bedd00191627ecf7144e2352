@@ -1,0 +1,32 @@
+package com.nt.proxy;
+
+import com.nt.command.BankService;
+import com.nt.command.BankServiceImpl;
+
+public class BankServiceProxy implements BankService {
+	  private BankService  service;
+	public BankServiceProxy() {
+		System.out.println("BankServiceProxy:: 0-param constructor");
+		 service=new BankServiceImpl();
+	}
+
+	@Override
+	public String withdraw(int acno, float amt) {
+		String result=null;
+		if(amt<=4000)
+			result=service.withdraw(acno, amt);
+		else{
+			result=service.withdraw(acno, 4000);
+			result=result+" (Only 4 thousand is limit , So we can allow to withdraw u r amount:: "+amt+")";
+		}
+			
+		return null;
+	}
+
+	@Override
+	public String deposite(int acno, float amt) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

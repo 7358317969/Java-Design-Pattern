@@ -1,0 +1,13 @@
+package com.nt.service;
+
+import com.nt.vo.CrickterPorfileVO;
+
+public class CrickBuzzMgmtServiceImpl implements CrickBuzzProfileMgmtService {
+
+	@Override
+	public CrickterPorfileVO fetchCrickterProfile(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

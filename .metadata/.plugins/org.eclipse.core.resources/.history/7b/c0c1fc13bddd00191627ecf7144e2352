@@ -1,0 +1,17 @@
+package com.nt.command;
+
+public class BankServiceImpl implements BankService {
+
+	@Override
+	public String withdraw(int acno, float amt) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String deposite(int acno, float amt) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

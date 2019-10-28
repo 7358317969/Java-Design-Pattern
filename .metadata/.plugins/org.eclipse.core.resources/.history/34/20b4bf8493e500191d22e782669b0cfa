@@ -1,0 +1,28 @@
+package com.nt.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import com.nt.bo.BaseEmployeeBO;
+import com.nt.bo.HREmployeeBO;
+
+public class HREmployeeDAO implements EmployeeDAO {
+	private static final String  INSERT_HR_EMP_QUERY="INSERT INTO BD_HR_EMP VALUES(BD_ENO_SEQ.NEXTVAL,?,?,?)";
+	
+	@Override
+	public void insert(BaseEmployeeBO bo, Connection con) throws SQLException {
+		PreparedStatement ps=null;
+      try {
+    	  //create PreparedStatement object
+    	  ps=con.prepareStatement(INSERT_HR_EMP_QUERY);
+    	  //set values to Query params
+    	  ps.setString(1,bo.getEname());
+    	  ps.setString(2,bo.getEadd());
+    	  ps.setString(3,((HREmployeeBO)bo).getDesg()));
+    	  
+      }
+
+	}
+
+}

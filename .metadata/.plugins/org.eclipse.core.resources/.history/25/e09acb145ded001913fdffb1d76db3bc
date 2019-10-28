@@ -1,0 +1,18 @@
+package com.nt.locator;
+
+public class IccCrickterSessionFacadeLocator {
+	private  static  IccCrickterSessionFacadeLocator  INSTANCE=null;
+	
+	private IccCrickterSessionFacadeLocator() {
+		
+	}
+	
+	public   static  IccCrickterSessionFacadeLocator  getInstance() {
+		 if(INSTANCE==null)
+			 INSTANCE=new IccCrickterSessionFacadeLocator();
+		 
+		 return INSTANCE;
+	}
+	
+
+}

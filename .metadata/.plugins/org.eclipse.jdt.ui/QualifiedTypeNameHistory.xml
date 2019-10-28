@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.nt.dto.CrickterIdDTO"/>
+<fullyQualifiedTypeName name="com.nt.ext1.IccCricketerIdFinder"/>
+<fullyQualifiedTypeName name="com.nt.ext1.IccCrickterIdFinderImpl"/>
+<fullyQualifiedTypeName name="com.nt.ext2.IccCricketerProfileFinder"/>
+<fullyQualifiedTypeName name="com.nt.ext2.IccCrickterProfileFinderImpl"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="com.nt.sessionfacade.IccCrickterProfileSessionFacadeImpl"/>
+<fullyQualifiedTypeName name="com.nt.locator.IccCrickterSessionFacadeLocator"/>
+<fullyQualifiedTypeName name="com.nt.sessionfacade.IccCrickterProfileSessionFacade"/>
+<fullyQualifiedTypeName name="com.nt.dto.CrickterPorfileDTO"/>
+<fullyQualifiedTypeName name="com.nt.service.CrickBuzzProfileMgmtService"/>
+<fullyQualifiedTypeName name="com.nt.service.CrickBuzzMgmtServiceImpl"/>
+<fullyQualifiedTypeName name="com.nt.vo.CrickterPorfileVO"/>
+<fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="com.nt.bo.ProfileBO"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="com.nt.dao.ProfileDAO"/>
+<fullyQualifiedTypeName name="com.nt.dao.ProfileDAOImpl"/>
+<fullyQualifiedTypeName name="com.nt.dto.ProfileDTO"/>
+<fullyQualifiedTypeName name="com.nt.service.ProfileMgmtService"/>
+<fullyQualifiedTypeName name="com.nt.service.ProfileMgmtServiceImpl"/>
+<fullyQualifiedTypeName name="java.util.ResourceBundle"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+<fullyQualifiedTypeName name="com.nt.command.CommandHelper"/>
+<fullyQualifiedTypeName name="com.nt.dispatcher.Dispatcher"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+</qualifiedTypeNameHistroy>

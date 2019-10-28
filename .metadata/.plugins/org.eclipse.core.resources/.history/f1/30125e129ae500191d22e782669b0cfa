@@ -1,0 +1,81 @@
+package com.nt.delegate;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import com.nt.bo.FinanceEmployeeBO;
+import com.nt.bo.HREmployeeBO;
+import com.nt.dao.FinanceEmployeeDAO;
+import com.nt.dao.HREmployeeDAO;
+import com.nt.errors.EmployeeRegistrationProblem;
+import com.nt.factory.ConnectionFactory;
+import com.nt.vo.EmployeeVO;
+
+public class EmployeeMgmtBusinessDelegate {
+      private HREmployeeDAO dao1=null;
+      private  FinanceEmployeeDAO dao2=null;
+	
+	public EmployeeMgmtBusinessDelegate() {
+		dao1=new HREmployeeDAO();
+		dao2=new FinanceEmployeeDAO();
+	}
+	
+	public    String  regsiterEmployee(EmployeeVO vo)throws EmployeeRegistrationProblem{
+		   HREmployeeBO  hrBO=null;
+		   FinanceEmployeeBO financeBO=null;
+		   Connection con=null;
+		   boolean flag=false;
+		   String msg=null;
+		   try {
+			   //convert VO to BOs  (usecase1)
+			   hrBO=new HREmployeeBO();
+			   hrBO.setEname(vo.getEname());
+			   hrBO.setDesg(vo.getDesg());
+			   hrBO.setEadd(vo.getEadd());
+			   
+			   financeBO=new FinanceEmployeeBO();
+			   financeBO.setEname(vo.getEname());
+			   financeBO.setEadd(vo.getEadd());
+			   financeBO.setSalary(Float.parseFloat(vo.getSalary()));
+			   //get Conn obj from ConnectionFactory
+			   con=ConnectionFactory.getPooledConnection();
+			   //begin Transaction 
+			   con.setAutoCommit(false);
+			   //use dAO
+			   dao1.insert(hrBO, con);
+			   dao2.insert(financeBO, con);
+			   flag=true;
+		   }
+		   catch (SQLException se) {
+			   flag=false;
+			 if(se.getErrorCode()==1)
+				 throw new EmployeeRegistrationProblem("Employee already registered");  //usecase2
+			 else if(se.getErrorCode()==12899)
+				 throw new EmployeeRegistrationProblem("certain column value is more lenthy"); //useacase2
+			 else
+				 throw new EmployeeRegistrationProblem("unknown  DB Problem"); //usecase2
+		}
+		   catch(Exception e) {
+			   flag=false;
+			   throw new EmployeeRegistrationProblem("unknown Internal Problem"); //usecase2
+		   }
+		   finally {
+			   //TransactionManagement
+			   try {
+			   if(flag) {
+				   con.commit();  //usecase3
+				   msg="Registration completed --(Tx Committed)";
+			   }
+			   else {
+				   con.rollback();  //usecase3
+				   msg="Registration failed--(Tx rolledback)";
+			   }
+			   }//try
+			   catch(Exception e) {
+				   e.printStackTrace();
+			  }
+		   } //method
+	}//class
+	
+	
+}

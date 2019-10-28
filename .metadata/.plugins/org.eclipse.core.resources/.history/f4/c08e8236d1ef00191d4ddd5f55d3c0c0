@@ -1,0 +1,13 @@
+package com.nt.service;
+
+import com.nt.dto.ProfileDTO;
+
+public class ProfileMgmtServiceImpl implements ProfileMgmtService {
+
+	@Override
+	public ProfileDTO fetchProfileById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,18 @@
+package com.nt.factory;
+
+import com.nt.comp.BooksCollection;
+import com.nt.comp.BooksCollection;
+import com.nt.comp.FictionalBooksCollection;
+
+public class BookFactory {
+	
+	
+	public  static   BooksCollection   getInstance(String type) {
+		BooksCollection collection=null;
+		if(type.equalsIgnoreCase(BookType.FICTIONAL))
+			collection=new FictionalBooksCollection();
+		else if()
+		
+	}
+
+}

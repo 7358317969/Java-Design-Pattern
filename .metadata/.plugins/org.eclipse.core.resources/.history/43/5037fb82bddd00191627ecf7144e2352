@@ -1,0 +1,24 @@
+package com.nt.proxy;
+
+import com.nt.command.BankService;
+import com.nt.command.BankServiceImpl;
+
+public class BankServiceProxy implements BankService {
+	  private BankService  service;
+	public BankServiceProxy() {
+		 service=new BankServiceImpl();
+	}
+
+	@Override
+	public String withdraw(int acno, float amt) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String deposite(int acno, float amt) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

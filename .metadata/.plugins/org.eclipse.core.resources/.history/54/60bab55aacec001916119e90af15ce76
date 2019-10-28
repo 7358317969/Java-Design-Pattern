@@ -1,0 +1,13 @@
+package com.nt.ext1;
+
+import com.nt.dto.CrickterIdDTO;
+
+public class IccCrickterIdFinderImpl implements IccCricketerIdFinder {
+
+	@Override
+	public CrickterIdDTO fetchIdDetailsByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

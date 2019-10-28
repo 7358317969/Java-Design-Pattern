@@ -1,0 +1,43 @@
+package com.nt.test;
+
+import java.util.Scanner;
+
+import com.nt.controller.MainController;
+import com.nt.vo.CustomerVO;
+
+public class JeeDAODPTest {
+
+	public static void main(String[] args) {
+		Scanner sc=null;
+		String name=null,addrs=null,pAmt=null,rate=null,time=null;
+		CustomerVO vo=null;
+		MainController controller=null;
+		//read inputs
+		sc=new Scanner(System.in);
+		System.out.println("enter Customer name::");
+		name=sc.next();
+		System.out.println("Enter  customer address::");
+		addrs=sc.next();
+		System.out.println("enter  Principle Amount::");
+		pAmt=sc.next();
+		System.out.println("enter rate of Intrest:: ");
+		rate=sc.next();
+		System.out.println("enter Time ::");
+		time=sc.next();
+		
+		//create VO class obj having  inputs
+		vo=new CustomerVO();
+		vo.setCustName(name); vo.setCustAddrs(addrs);
+		vo.setPAmt(pAmt); vo.setRate(rate); vo.setTime(time);
+		
+		//create Controller class object
+		controller=new MainController();
+		try {
+		System.out.println("Result::"+controller.processCustomer(vo));
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+	}//main
+}//class

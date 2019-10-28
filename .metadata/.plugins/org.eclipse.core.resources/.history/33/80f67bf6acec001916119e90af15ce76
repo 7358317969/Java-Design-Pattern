@@ -1,0 +1,7 @@
+package com.nt.ext2;
+
+public interface IccCricketerProfileFinder {
+	
+	public  CrickterProfileDTO   fetchCrickterByName(String name);
+
+}

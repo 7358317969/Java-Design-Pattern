@@ -1,0 +1,20 @@
+package com.fpkt.service;
+
+import com.nt.adapter.BankNameToBankCodeAdapter;
+import com.nt.dto.PaymentInfoDTO;
+
+public class FlipkartServiceImpl implements FlipkartService {
+
+	@Override
+	public String shoppingAndPayment(PaymentInfoDTO dto) {
+		float  billAmt=0.0f;
+		String result=null;
+	  //calc bill Amount
+		for(float price:dto.getPrices()) {
+			billAmt=billAmt+price;
+		}
+		//doPayment
+		result=BankNameToBankCodeAdapter.convertBankNameToBankCodeAndDoPayment(dto.getBankName(), dto.getCardNo(), billAmt);
+		return result;
+	}
+}

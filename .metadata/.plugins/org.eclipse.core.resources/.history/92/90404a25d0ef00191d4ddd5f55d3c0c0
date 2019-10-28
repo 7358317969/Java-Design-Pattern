@@ -1,0 +1,13 @@
+package com.nt.dao;
+
+import com.nt.bo.ProfileBO;
+
+public class ProfileDAOImpl implements ProfileDAO {
+
+	@Override
+	public ProfileBO getProfileById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.nt.model;
+
+@Data	
+public class UserDetails {
+	private String uname;
+	private String pwd;
+	
+
+}

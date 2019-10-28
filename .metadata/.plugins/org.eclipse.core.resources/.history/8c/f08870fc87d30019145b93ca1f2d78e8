@@ -1,0 +1,36 @@
+package com.nt.factory;
+
+import com.nt.bike.BajajBike;
+
+public abstract  class BajajBikeFactory {
+	public  void assemble() {
+		System.out.println("BajajBikeFactory.assemble()");
+	}
+	
+	public  void  paint() {
+		System.out.println("BajajBikeFactory.paint()");
+	}
+	
+	public  void  roadTest() {
+		System.out.println("BajajBikeFactory.roadTest()");
+	}
+	
+	public  void  packing() {
+		System.out.println("BajajBikeFactory.roadTest()");
+	}
+	public  abstract  BajajBike getInstance(String type);
+
+	  //Factory Method DP
+	public   BajajBike  orderBike(String type) {
+		BajajBike bike=null;
+		bike=getInstance(type);
+		assemble();
+		paint();
+		roadTest();
+		packing();
+		return bike;
+	}
+
+
+
+}

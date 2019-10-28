@@ -1,0 +1,26 @@
+package com.nt.sdp;
+
+public class Printer {
+	//private  static Printer  INSTANCE=new Printer();
+	private  static Printer  INSTANCE;
+	
+	//0-param constructor private
+	private  Printer() {
+		System.out.println("Printer: 0-param constructor (private)");
+	}
+	
+	//static factory method
+	public   static  Printer getInstance() {
+		  
+		if(INSTANCE==null)
+		    INSTANCE=new Printer();
+		
+		return INSTANCE;
+	}
+	
+	//static factory method
+	/*	public   static  Printer getInstance() {
+			return INSTANCE;
+		} */
+
+}

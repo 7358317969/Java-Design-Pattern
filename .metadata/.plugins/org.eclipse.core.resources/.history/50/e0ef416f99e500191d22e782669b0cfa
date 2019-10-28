@@ -1,0 +1,18 @@
+package com.nt.delegate;
+
+import com.nt.dao.FinanceEmployeeDAO;
+import com.nt.dao.HREmployeeDAO;
+
+public class EmployeeMgmtBusinessDelegate {
+      private HREmployeeDAO dao1=null;
+      private  FinanceEmployeeDAO dao2=null;
+	
+	public EmployeeMgmtBusinessDelegate() {
+		dao1=new HREmployeeDAO();
+		dao2=new FinanceEmployeeDAO();
+	}
+	
+	
+	
+	
+}

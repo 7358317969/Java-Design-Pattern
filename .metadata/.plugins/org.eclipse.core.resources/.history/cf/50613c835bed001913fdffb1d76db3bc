@@ -1,0 +1,5 @@
+package com.nt.sessionfacade;
+
+public interface IccCrickterProfileSessionFacade {
+
+}

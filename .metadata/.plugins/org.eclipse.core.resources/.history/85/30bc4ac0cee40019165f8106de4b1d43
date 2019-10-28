@@ -1,0 +1,40 @@
+package com.nt.factory;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
+
+public class ConnectionFactory {
+	private static DataSource ds;
+	static {
+		InitialContext ic=null;
+		try {
+			//create InitialContext object
+			ic=new InitialContext();
+			// get Datasource object
+			ds=(DataSource) ic.lookup("java:/comp/env/DsJndi");
+			
+		}
+		catch(NamingException ne) {
+			ne.printStackTrace();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+    
+	public  static Connection  getPooledConnection() throws SQLException {
+		  Connection con=null;
+		//return pooled jdbc con object
+		  con=ds.getConnection();
+		  return con;
+    }
+	
+	public static  void closeConnection(Connection con)throws SQLException{
+		//return pooled jdbc con object back to jdbc con pool
+		  con.close();
+	}
+}

@@ -1,0 +1,25 @@
+package com.nt.proxy;
+
+import java.lang.reflect.Method;
+
+import net.sf.cglib.proxy.MethodInterceptor;
+import net.sf.cglib.proxy.MethodProxy;
+
+public class ProxyHelper implements MethodInterceptor {
+
+	@Override
+	public Object intercept(Object target, Method method, Object[] args, MethodProxy proxy) throws Throwable {
+		   Object retVal=null;
+		if(method.getName().equalsIgnoreCase("withdraw")) {
+			   if(((Float)args[1])<=4000)
+				   retVal=proxy.invoke(target, args);
+			   else {
+				   args[1]=4000;
+				   retVal=proxy.invoke(target, args);
+				   retVal=retVal+" u can not withdraw more than Rs.4000";
+			   }
+			   return retVal;
+		}
+	}
+
+}
